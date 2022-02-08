@@ -32,7 +32,7 @@ app.get('/add/:a/:b', (req: Request, res: Response) =>
 
 app.get('/', (req: Request, res: Response) =>
     res.send('Welcome!!!\nPlease use below link to see see the Tuits and Users\n' +
-        '<html><a>https://soft-eng-priyesh.herokuapp.com/users\n</a>>' +
+        '<html><a>https://soft-eng-priyesh.herokuapp.com/users\n</a>' +
         '<a>https://soft-eng-priyesh.herokuapp.com/users</a></html>'));
 
 
