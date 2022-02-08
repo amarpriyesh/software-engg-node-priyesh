@@ -1,3 +1,5 @@
+import TuitDao from "./daos/TuitDao";
+
 const mongoose = require('mongoose');
 //
 //mongoose.connect('mongodb://127.0.0.1:27017/tuiter');
@@ -6,6 +8,7 @@ const mongoString = "mongodb+srv://priyesh:priyesh123@cluster0.2ycnj.mongodb.net
 import UserController from "./controllers/UserController";
 import express, {Request, Response} from 'express';
 import UserDao from "./daos/UserDao";
+import TuitController from "./controllers/TuitController";
 //userDao: UserDao;
 
 const app = express();
@@ -28,7 +31,8 @@ app.get('/add/:a/:b', (req: Request, res: Response) =>
     res.send(req.params.a + req.params.b));
 
 
-userController:  new UserController(app,new UserDao);
+new  UserController(app,new UserDao);
+new TuitController(app,new TuitDao);
 
 
 
